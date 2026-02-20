@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UN UOMO DI CAMPAGNA - Giovanni Pascoli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0b10;
+            --text-light: #e0d9d1;
+            --accent-gold: #c5a059;
+            --accent-red: #8b0000;
+            --night-blue: #1a1b2e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER HERO --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #1a1b2e 0%, #0a0b10 100%);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            letter-spacing: 10px;
+            color: var(--accent-gold);
+            text-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        /* --- TIMELINE ORIZZONTALE --- */
+        .timeline-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 11, 16, 0.95);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .timeline-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .timeline-link:hover { color: var(--accent-gold); }
+
+        /* --- SEZIONI --- */
+        section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 20px;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* --- SPLIT SCREEN POLITICA --- */
+        .split-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .split-box {
+            padding: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: 0.5s;
+        }
+
+        .split-box:hover {
+            background: rgba(197, 160, 89, 0.05);
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+        }
+
+        /* --- GELSOMINO GLOW --- */
+        #gelsomino {
+            background: linear-gradient(to bottom, #0a0b10, #141624);
+        }
+
+        .poem-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            line-height: 2;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .highlight {
+            color: var(--accent-gold);
+            cursor: help;
+            border-bottom: 1px dashed var(--accent-gold);
+        }
+
+        /* --- ANIMAZIONE NEBBIA --- */
+        .fog-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="fog-overlay"></div>
+
+<header>
+    <h1>UN UOMO DI CAMPAGNA</h1>
+    <p class="subtitle">Giovanni Pascoli: Il Poeta del Nido e del Mistero</p>
+</header>
+
+<nav class="timeline-nav">
+    <a href="#trauma" class="timeline-link">1867 TRAUMA</a>
+    <a href="#fanciullino" class="timeline-link">1897 FANCIULLINO</a>
+    <a href="#gelsomino" class="timeline-link">1901 GELSOMINO</a>
+    <a href="#politica" class="timeline-link">1911 POLITICA</a>
+</nav>
+
+<section id="trauma">
+    <h2>1867: Il Nido Spezzato</h2>
+    <div class="content-box">
+        <p>L'uccisione del padre Ruggero il 10 agosto rompe per sempre l'idillio familiare. Per Pascoli, il mondo esterno diventa una minaccia caotica e violenta da cui proteggersi tornando alle radici. La sua poesia diventa un tentativo ossessivo di ricostruire quel "nido" protettivo, luogo di rifugio dai morti e dalla Storia.</p>
+    </div>
+</section>
+
+<section id="fanciullino">
+    <h2>La Poetica del Fanciullino</h2>
+    <div class="content-box">
+        <p>In ognuno di noi vive un fanciullo che osserva il mondo con stupore. Il poeta è colui che sa dargli voce, usando un linguaggio che scopre le relazioni segrete tra le cose attraverso <strong>intuizioni e analogie</strong>, non tramite la logica razionale.</p>
+    </div>
+</section>
+
+<section id="gelsomino">
+    <h2>Il Gelsomino Notturno</h2>
+    <div class="content-box">
+        <div class="poem-text">
+            E s’aprono i fiori notturni,<br>
+            nell’ora che penso ai miei cari.<br>
+            Sono apparse in mezzo ai viburni<br>
+            le <span class="highlight" title="Sinestesia: unione di vista e olfatto">farfalle crepuscolari</span>...
+        </div>
+        <p style="margin-top:30px; font-size: 0.9rem;">
+            <strong>Spiegazione:</strong> Una poesia carica di simbolismo erotico filtrato. Mentre l'amico vive la sua prima notte di nozze, Pascoli osserva la natura dall'esterno, confermandosi "escluso" dalla vita e dalla fecondazione, relegato al ricordo dei defunti.
+        </p>
+    </div>
+</section>
+
+<section id="politica">
+    <h2>Il Contrasto Politico</h2>
+    <div class="split-container">
+        <div class="split-box">
+            <h3>Socialismo Umanitario</h3>
+            <p>Nato dalla militanza giovanile e dal carcere. È un socialismo della fratellanza: poiché siamo tutti destinati a morire, dobbiamo amarci e non combatterci.</p>
+        </div>
+        <div class="split-box">
+            <h3>Nazionalismo Proletario</h3>
+            <p>Nel 1911 appoggia la guerra in Libia. L'Italia è la "Grande Proletaria": una madre povera che cerca terra per i suoi figli emigrati, affinché non siano più schiavi all'estero.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Animazione di apparizione allo scroll
+    const sections = document.querySelectorAll('section');
+    
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Smooth scroll per la timeline
+    document.querySelectorAll('.timeline-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
